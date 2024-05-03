@@ -1,10 +1,4 @@
-// ignore_for_file: use_build_context_synchronously
-
-import 'dart:developer';
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:weather_app/services/weather_model.dart';
-import 'package:weather_app/services/weather_services.dart';
 
 class SearchView extends StatelessWidget {
   const SearchView({super.key});
@@ -25,11 +19,6 @@ class SearchView extends StatelessWidget {
         child: Center(
           child: TextField(
             onSubmitted: (value) async {
-              // debugPrint('value: ${value}');
-              // log(value);
-              weatherModel = await WeatherService(dio: Dio())
-                  .getCurrentWeather(cityName: value);
-              // log(weatherModel.cityName);
               Navigator.pop(context);
             },
             decoration: const InputDecoration(
@@ -62,5 +51,3 @@ class SearchView extends StatelessWidget {
     );
   }
 }
-
-WeatherModel? weatherModel;
