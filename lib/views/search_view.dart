@@ -21,8 +21,8 @@ class SearchView extends StatelessWidget {
         child: Center(
           child: TextField(
             onSubmitted: (value) async {
-              BlocProvider.of<GetWeatherCubit>(context)
-                  .getWeather(cityName: value);
+              var getWeatherCubit = BlocProvider.of<GetWeatherCubit>(context);
+              getWeatherCubit.getWeather(cityName: value);
               Navigator.pop(context);
             },
             decoration: const InputDecoration(
