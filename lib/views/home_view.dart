@@ -10,9 +10,10 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        foregroundColor: Colors.white,
         title: const Text(
           'Weather App',
-          style: TextStyle(color: Colors.white),
+          // style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.blue,
         actions: [
@@ -28,7 +29,7 @@ class HomeView extends StatelessWidget {
               },
               icon: const Icon(
                 Icons.search,
-                color: Colors.white,
+                // color: Colors.white,
               ))
         ],
       ),
@@ -38,3 +39,15 @@ class HomeView extends StatelessWidget {
     );
   }
 }
+
+// create states
+// create cubit
+// create functions
+// provide cubit
+// integrate cubit
+// trigger cubit
+
+
+
+
+// listen cubit

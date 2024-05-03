@@ -13,7 +13,12 @@ class SearchView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Search City'),
+        foregroundColor: Colors.white,
+        title: const Text(
+          'Search City',
+          // style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.blue,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -57,4 +62,5 @@ class SearchView extends StatelessWidget {
     );
   }
 }
+
 WeatherModel? weatherModel;
